@@ -484,17 +484,17 @@ class HybridSessionStore extends HybridSessionStore_Base {
 	 * @param string $key Desired session key
 	 */
 	public static function init($key = null) {
-		$instance = Injector::inst()->get(__CLASS__);
-		if(empty($key)) {
-			user_error(
-				'HybridSessionStore::init() was not given a $key. Disabling cookie-based storage',
-				E_USER_WARNING
-			);
-		} else {
-			$instance->setKey($key);
-		}
-		register_sessionhandler($instance);
-		self::$enabled = true;
+		// $instance = Injector::inst()->get(__CLASS__);
+		// if(empty($key)) {
+		// 	user_error(
+		// 		'HybridSessionStore::init() was not given a $key. Disabling cookie-based storage',
+		// 		E_USER_WARNING
+		// 	);
+		// } else {
+		// 	$instance->setKey($key);
+		// }
+		// register_sessionhandler($instance);
+		// self::$enabled = true;
 	}
 
 	public static function is_enabled() {
